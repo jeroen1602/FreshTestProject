@@ -1,0 +1,25 @@
+version: '3.4'
+services:
+  php-docker:
+    container_name: php-docker
+    build: .
+    restart: unless-stopped
+    volumes:
+      - ./:/var/www/html/
+    ports:
+      - "3000:80"
+
+  mariadb-test:
+    container_name: mariadb-test
+    image: mariadb
+    restart: unless-stopped
+    environment:
+      - TZ=Europe/Amsterdam
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - "3307:3306"
+
+#networks:
+#  default:
+#    external:
+#      name: main
