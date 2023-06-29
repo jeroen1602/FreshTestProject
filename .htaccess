@@ -1,13 +1,13 @@
 ### Rewrite Rules Added by CyberPanel Rewrite Rule Generator
 
-RewriteEngine on
-
-RewriteCond %{HTTPS}  !=on
-#RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
-
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.+)$ index.php [QSA,L]
+#RewriteEngine on
+#
+#RewriteCond %{HTTPS}  !=on
+##RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
+#
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^(.+)$ index.php [QSA,L]
 
 #<IfModule mod_expires.c>
 #    ExpiresActive On

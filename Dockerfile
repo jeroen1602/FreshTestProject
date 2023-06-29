@@ -15,8 +15,8 @@ RUN apt-get update && apt-get install -y \
  # for LocalGit.php
  git
 
-#RUN docker-php-ext-install pdo_mysql
-#RUN docker-php-ext-install mysqli
+RUN docker-php-ext-install pdo_mysql
+RUN docker-php-ext-install mysqli
 
 RUN a2enmod \
   rewrite info
